@@ -1,9 +1,5 @@
 /root/
     /Domů/
         index.html
-    /kontakt/
-        index.html
-    /o-nás/
-        index.html
     /Menu/
         index.html
