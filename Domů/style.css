@@ -407,3 +407,11 @@ footer {
             text-decoration: none;
         }
 }
+
+@media (max-width: 277px ) {
+    .overlay-napoj {
+        position: absolute;
+        top: 110%;
+        left: 0%;
+    }
+}
