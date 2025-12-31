@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Vítejte</title>
+    <link rel="stylesheet" href="style.css">
+    <script href="/js/script.js"></script>
+    <link rel="icon" type="image/x-icon" href="">
+</head>
+<header>
+  <div class="nav-bar" id="home">
+       <div class="logo"><a href="/domu"><img src="/img/logo.png"></a></div>
+       <ul class="nav-items">
+          <li><a href="/domu/">Domů</a></li>
+          <li><a href="/menu/">Nápojový Lístek</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+          <li><ą href="/galerie">Galerie</a></li>
+       </ul>
+       <div class="toggle_btn">
+          <i class="fa-solid fa-bars"></i>
+       </div>
+  </div>
+  <div class="dropdown_menu">
+    <li><a href="/domu/">Domů</a></li>
+    <li><a href="/menu/">Nápojový Lístek</a></li>
+    <li><a href="#kontakt">Kontakt</a></li>
+    <li><ą href="/galerie">Galerie</a></li>
+  </div>
+</header>
+ <script>
+  const toggleBtn = document.querySelector('.toggle_btn')
+  const toggleBtnIcon = document.querySelector('.toggle_btn i')
+  const dropDownMenu = document.querySelector('.dropdown_menu')
+
+  toggleBtn.onclick = function () {
+    dropDownMenu.classList.toggle('open')
+    const isOpen = dropDownMenu.classList.contains('open')
+
+    toggleBtnIcon.classList = isOpen
+    ? 'fa-solid fa-xmark'
+    : 'fa-solid fa-bars'
+  }
+ </script>
+    <main>
+        <section class="uhulu-galerie">
+            <h2>Galerie</h2>
+          
+            <div class="uhulu-grid">
+              <img src="/img/galerie/1.jpg" alt="U Hůlů – interiér">
+              <img src="/img/galerie/2.jpg" alt="U Hůlů – bar">
+              <img src="/img/galerie/3.jpg" alt="U Hůlů – zahrádka">
+              <img src="/img/galerie/4.jpg" alt="U Hůlů – akce">
+              <img src="/img/galerie/5.jpg" alt="U Hůlů – pivo">
+              <img src="/img/galerie/6.jpg" alt="U Hůlů – kvíz">
+              <img src="/img/galerie/7.jpg" alt="U Hůlů – kvíz">
+              <img src="/img/galerie/8.jpg" alt="U Hůlů – kvíz">
+            </div>
+          </section>          
+      </main>
+</body>
+<footer>
+    <div class="container" id="kontakt">
+        <div class="adresa">
+            <h1>ADRESA</h1>
+            <p>Čsl. armády 1546, 434 01  Most</p>
+        </div>
+        <div class="oteviraci-doba">
+            <h1>OTEVÍRACÍ DOBA</h1>
+            <p>Út: 16:00 - 22:00</p>
+            <p>St: 16:00 - 22:00</p>
+            <p>Pá: 16:00 - 22:00</p>
+        </div>
+        <div class="kontakt">
+            <h1>KONTAKT</h1>
+            <i class="fa-solid fa-phone"></i><a href="tel:+420 603 404 676">+420 603 404 676</a>
+            <br>
+            <br>
+            <i class="fa-solid fa-envelope"></i><a href="mailto:info@uhulu.cz">info@uhulu.cz</a>
+        </div>
+    </div>
+    <div class="credit">
+        <p>Created with ❤️ by <a href="https://martyc.eu">martyc.eu</a></p>
+    </div>
+</footer>
+</html>

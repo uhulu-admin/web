@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Vítejte</title>
+    <link rel="stylesheet" href="style.css">
+    <script href="/js/script.js"></script>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta name="description" content="Oficiální webová stránka U HŮLŮ - Vítejte v našem baru, kde se setkává přátelská atmosféra s kvalitními nápoji a skvělou obsluhou.">
+</head>
+<header>
+  <div class="nav-bar">
+       <div class="logo"><a href="/domu/"><img src="/img/logo.png"></a></div>
+       <ul class="nav-items">
+          <li><a href="/domu/">Domů</a></li>
+          <li><a href="/menu/">Nápojový Lístek</a></li>
+          <li><a href="#Kontakt">Kontakt</a></li>
+          <li><ą href="/galerie">Galerie</a></li>
+       </ul>
+       <div class="toggle_btn">
+          <i class="fa-solid fa-bars"></i>
+       </div>
+  </div>
+  <div class="dropdown_menu">
+    <li><a href="/domu/">Domů</a></li>
+    <li><a href="/menu/">Nápojový Lístek</a></li>
+    <li><a href="#Kontakt">Kontakt</a></li>
+    <li><ą href="/galerie">Galerie</a></li>
+  </div>
+</header>
+ <script>
+  const toggleBtn = document.querySelector('.toggle_btn')
+  const toggleBtnIcon = document.querySelector('.toggle_btn i')
+  const dropDownMenu = document.querySelector('.dropdown_menu')
+
+  toggleBtn.onclick = function () {
+    dropDownMenu.classList.toggle('open')
+    const isOpen = dropDownMenu.classList.contains('open')
+
+    toggleBtnIcon.classList = isOpen
+    ? 'fa-solid fa-xmark'
+    : 'fa-solid fa-bars'
+  }
+ </script>
+<body>
+    <div class="menu">
+    <img id="image" src="/menu/img/1.jpg" alt="Galerie"/>
+
+    <div>
+      <button onclick="prevImage()"><i class="fa-solid fa-arrow-left"></i></button>
+      <button onclick="nextImage()"><i class="fa-solid fa-arrow-right"></i></button>
+    </div>
+</div>
+    <script>
+      const images = ["/menu/img/1.jpg", "/menu/img/2.jpg"];
+      let currentIndex = 0;
+  
+      function showImage(index) {
+        document.getElementById("image").src = images[index];
+      }
+  
+      function prevImage() {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        showImage(currentIndex);
+      }
+  
+      function nextImage() {
+        currentIndex = (currentIndex + 1) % images.length;
+        showImage(currentIndex);
+      }
+    </script>
+      
+</body>
+<footer>
+    <div class="container">
+        <div class="adresa">
+            <h1>ADRESA</h1>
+            <p>Čsl. armády 1546, 434 01  Most</p>
+        </div>
+        <div class="oteviraci-doba">
+            <h1>Otevírací doba</h1>
+            <p>Út: 16:00 - 22:00</p>
+            <p>St: 16:00 - 22:00</p>
+            <p>Pá: 16:00 - 22:00</p>
+        </div>
+        <div class="kontakt">
+            <h1>KONTAKT</h1>
+            <a href="tel:+420 603 404 676">+420 603 404 676</a>
+            <br>
+            <a href="mailto:info@uhulu.cz">info@uhulu.cz</a>
+        </div>
+    </div>
+    <div class="credit">
+        <p>Created with ❤️ by <a href="https://martyc.eu">martyc.eu</a></p>
+    </div>
+</footer>
+</html>
