@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U Hůlů | Most</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="/"><img src="/img/logo.png" alt="U Hůlů Logo"></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="/domu/">Domů</a></li>
+            <li><a href="/menu/">Lístek</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
+            <li><a href="/galerie">Galerie</a></li>
+            <li><a href="/menu/" class="btn-nav">Rezervace</a></li>
+        </ul>
+        <div class="burger" id="mobile-menu-btn">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </nav>
+    <div class="mobile-nav" id="mobile-nav">
+        <a href="/domu/">Domů</a>
+        <a href="/menu/">Nápojový Lístek</a>
+        <a href="#kontakt">Kontakt</a>
+        <a href="/galerie">Galerie</a>
+    </div>
+</header>
+
+<main>
+    <section class="hero">
+        <div class="hero-slideshow">
+            <div class="hero-slide active">
+                <img src="/img/IMG_1278.jpg" alt="Hospoda interiér" class="hero-image-zoom">
+            </div>
+            <div class="hero-slide">
+                <img src="/img/IMG_1279.jpg" alt="Pivo na čepu" class="hero-image-zoom">
+            </div>
+            <div class="hero-slide">
+                <img src="/img/IMG_1283.jpg" alt="Atmosféra" class="hero-image-zoom">
+            </div>
+        </div>
+        
+        <div class="hero-overlay"></div>
+        
+        <div class="hero-content">
+            <span class="welcome-tag">Vítejte u nás</span>
+            <h1>U Hůlů</h1>
+            <p>Poctivé pivo a skvělá atmosféra v srdci Mostu.</p>
+            <div class="hero-btns">
+                <a href="/menu/" class="btn-gold">Nápojový lístek</a>
+                <a href="#kviz" class="btn-outline">Čtvrteční kvízy</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-quiz" id="kviz">
+        <div class="container">
+            <div class="quiz-box">
+                <div class="quiz-image">
+                    <img src="/img/565698888_1236758765161746_6649295362280406132_n.jpg" alt="Kvízový večer">
+                </div>
+                <div class="quiz-info">
+                    <h2>Hospodský Kvíz</h2>
+                    <p><strong>Každý čtvrtek od 18:00</strong></p>
+                    <p>Přijďte otestovat své znalosti a pobavit se s přáteli u dobrého piva. Výherci berou skvělé ceny!</p>
+                    <a href="tel:+420603404676" class="btn-small-link">Rezervovat stůl →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2537.3528448542957!2d13.631678877302052!3d50.50900127160336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470a2031f468c999%3A0xc21250ab1f5e5b2e!2zSG9zcG9kYSBVIEjFr2zFrw!5e0!3m2!1scs!2scz!4v1769358013106!5m2!1scs!2scz" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>    </section>
+</main>
+
+<footer id="kontakt">
+    <div class="footer-grid">
+        <div class="footer-col">
+            <h3>ADRESA</h3>
+            <p>Čsl. armády 1546<br>434 01 Most</p>
+        </div>
+        <div class="footer-col">
+            <h3>OTEVÍRACÍ DOBA</h3>
+            <p>Út - Pá: 16:00 - 22:00<br>So - Po: Zavřeno</p>
+        </div>
+        <div class="footer-col">
+            <h3>KONTAKT</h3>
+            <p><a href="tel:+420603404676"><i class="fa-solid fa-phone"></i> +420 603 404 676</a></p>
+            <p><a href="mailto:info@uhulu.cz"><i class="fa-solid fa-envelope"></i> info@uhulu.cz</a></p>
+        </div>
+    </div>
+    
+    <div class="credit">
+        <p>© 2026 U Hůlů | Created by <a href="https://martyc.eu">martyc.eu</a></p>
+    </div>
+
+    <div class="legal-info">
+      <p>Provozovatel: <strong>Ivona Vondráčková</strong>, se sídlem 17. listopadu 2069, 440 01, Louny.</p>
+      <p>IČO: 87043963 | Podnikatel je zapsán v živnostenském rejstříku.</p>
+  </div>
+</footer>
+
+<script>
+    // Mobilní Menu
+    const burger = document.getElementById('mobile-menu-btn');
+    const mobileNav = document.getElementById('mobile-nav');
+    
+    burger.addEventListener('click', () => {
+        mobileNav.classList.toggle('active');
+        burger.innerHTML = mobileNav.classList.contains('active') 
+            ? '<i class="fa-solid fa-xmark"></i>' 
+            : '<i class="fa-solid fa-bars"></i>';
+    });
+
+    // Slideshow
+    const slides = document.querySelectorAll('.hero-slide');
+    let currentSlide = 0;
+    const slideInterval = 5000;
+
+    function nextSlide() {
+        slides[currentSlide].classList.remove('active');
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].classList.add('active');
+    }
+    
+    if(slides.length > 0) {
+        setInterval(nextSlide, slideInterval);
+    }
+</script>
+
+</body>
+</html>

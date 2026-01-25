@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nápojový lístek | U Hůlů</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="/"><img src="/img/logo.png" alt="U Hůlů Logo"></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="/domu/">Domů</a></li>
+            <li><a href="/menu/">Lístek</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
+            <li><a href="/galerie">Galerie</a></li>
+            <li><a href="/menu/" class="btn-nav">Rezervace</a></li>
+        </ul>
+        <div class="burger" id="mobile-menu-btn">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </nav>
+    <div class="mobile-nav" id="mobile-nav">
+        <a href="/domu/">Domů</a>
+        <a href="/menu/">Nápojový Lístek</a>
+        <a href="#kontakt">Kontakt</a>
+        <a href="/galerie">Galerie</a>
+    </div>
+</header>
+
+<main class="menu-page">
+    <div class="coming-soon-container">
+        <i class="fa-solid fa-beer-mug-empty"></i>
+        <h1>Nápojový lístek</h1>
+        <div class="divider"></div>
+        <p>Právě pro vás ladíme nabídku toho nejlepšího pití. <br> <strong>Již brzy se zde objeví kompletní lístek.</strong></p>
+        <a href="/domu/" class="btn-gold">Zpět na hlavní stránku</a>
+    </div>
+</main>
+
+<footer id="kontakt">
+    <div class="footer-grid">
+        <div class="footer-col">
+            <h3>ADRESA</h3>
+            <p>Čsl. armády 1546<br>434 01 Most</p>
+        </div>
+        <div class="footer-col">
+            <h3>OTEVÍRACÍ DOBA</h3>
+            <p>Út - Pá: 16:00 - 22:00<br>So - Po: Zavřeno</p>
+        </div>
+        <div class="footer-col">
+            <h3>KONTAKT</h3>
+            <p><a href="tel:+420603404676"><i class="fa-solid fa-phone"></i> +420 603 404 676</a></p>
+            <p><a href="mailto:info@uhulu.cz"><i class="fa-solid fa-envelope"></i> info@uhulu.cz</a></p>
+        </div>
+    </div>
+    
+    <div class="credit">
+        <p>© 2026 U Hůlů | Created by <a href="https://martyc.eu">martyc.eu</a></p>
+    </div>
+    <div class="legal-info">
+      <p>Provozovatel: <strong>Ivona Vondráčková</strong>, se sídlem 17. listopadu 2069, 440 01, Louny.</p>
+      <p>IČO: 87043963 | Podnikatel je zapsán v živnostenském rejstříku.</p>
+  </div>
+</footer>
+
+<script>
+    const burger = document.getElementById('mobile-menu-btn');
+    const mobileNav = document.getElementById('mobile-nav');
+    
+    burger.addEventListener('click', () => {
+        mobileNav.classList.toggle('active');
+        burger.innerHTML = mobileNav.classList.contains('active') 
+            ? '<i class="fa-solid fa-xmark"></i>' 
+            : '<i class="fa-solid fa-bars"></i>';
+    });
+</script>
+</body>
+</html>
