@@ -1,9 +1,203 @@
-<html>
+<!DOCTYPE html>
+<html lang="cs">
 <head>
-    <meta http-equiv="refresh" content="0; URL=/domu/">
-    <title>Přesměrování...</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>U Hůlů | Tradiční hospoda a pivnice Most | Skvělé pivo a kvízy</title>
+    
+    <meta name="description" content="Hledáte nejlepší hospodu v Mostě? U Hůlů nabízí perfektně ošetřené pivo, skvělou atmosféru a legendární čtvrteční kvízy. Rezervujte si stůl ještě dnes!">
+    
+    <meta name="keywords" content="hospoda Most, pivnice Most, kam na pivo Most, hospodský kvíz, restaurace Most, čepované pivo">
+    
+    <meta name="author" content="U Hůlů">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://uhulu.cz/">
+
+    <meta property="og:locale" content="cs_CZ">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Hospoda U Hůlů | Nejlepší pivo v Mostě">
+    <meta property="og:description" content="Stavte se na jedno! Poctivá hospoda s atmosférou a pravidelnými akcemi v centru Mostu.">
+    <meta property="og:url" content="https://uhulu.cz/">
+    <meta property="og:site_name" content="U Hůlů">
+    <meta property="og:image" content="https://uhulu.cz/img/IMG_1278.jpg"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BarOrPub",
+      "name": "U Hůlů",
+      "image": "https://uhulu.cz/img/IMG_1278.jpg",
+      "@id": "https://uhulu.cz",
+      "url": "https://uhulu.cz",
+      "telephone": "+420603404676",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Čsl. armády 1546",
+        "addressLocality": "Most",
+        "postalCode": "434 01",
+        "addressCountry": "CZ"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 50.5030, 
+        "longitude": 13.6366 
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "16:00",
+          "closes": "22:00"
+        }
+      ],
+      "sameAs": [
+        "https://www.facebook.com/vase-stranka", 
+        "https://www.instagram.com/vase-stranka"
+      ],
+      "priceRange": "$",
+      "servesCuisine": "Czech"
+    }
+    </script>
 </head>
 <body>
-    <p>Přesměrovávám na<a href="/domu/">Domů</a>...</p>
+
+<header>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="/"><img src="/img/logo.png" alt="Logo Hospoda U Hůlů Most"></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="/domu/">Domů</a></li>
+            <li><a href="/menu/" title="Prohlédněte si naši nabídku">Lístek</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
+            <li><a href="/galerie">Galerie</a></li>
+            <li><a href="/menu/" class="btn-nav">Rezervace</a></li>
+        </ul>
+        <div class="burger" id="mobile-menu-btn" aria-label="Otevřít menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </nav>
+    <div class="mobile-nav" id="mobile-nav">
+        <a href="/domu/">Domů</a>
+        <a href="/menu/">Nápojový Lístek</a>
+        <a href="#kontakt">Kontakt</a>
+        <a href="/galerie">Galerie</a>
+    </div>
+</header>
+
+<main>
+    <section class="hero">
+        <div class="hero-slideshow">
+            <div class="hero-slide active">
+                <img src="/img/IMG_1278.jpg" alt="Interiér hospody U Hůlů v Mostě" class="hero-image-zoom">
+            </div>
+            <div class="hero-slide">
+                <img src="/img/IMG_1279.jpg" alt="Čepované pivo Most - U Hůlů" class="hero-image-zoom">
+            </div>
+            <div class="hero-slide">
+                <img src="/img/IMG_1283.jpg" alt="Příjemné posezení v restauraci Most" class="hero-image-zoom">
+            </div>
+        </div>
+        
+        <div class="hero-overlay"></div>
+        
+        <div class="hero-content">
+            <span class="welcome-tag">Vítejte u nás</span>
+            <h1>Tradiční hospoda U Hůlů Most</h1>
+            <p>Poctivé pivo, skvělí lidé a jedinečná atmosféra přímo v srdci Mostu.</p>
+            <div class="hero-btns">
+                <a href="/menu/" class="btn-gold">Naše nabídka</a>
+                <a href="#kviz" class="btn-outline">Hospodský kvíz</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-quiz" id="kviz">
+        <div class="container">
+            <div class="quiz-box">
+                <div class="quiz-image">
+                    <img src="/img/565698888_1236758765161746_6649295362280406132_n.jpg" alt="Hospodský kvíz Most zábava">
+                </div>
+                <div class="quiz-info">
+                    <h2>Nejlepší hospodský kvíz v Mostě</h2>
+                    <p class="highlight-time"><strong><i class="fa-regular fa-clock"></i> Každý čtvrtek od 18:00</strong></p>
+                    <p>Hledáte, kam v Mostě za zábavou? Přijďte otestovat své znalosti, dát si dobré pivo a pobavit se s přáteli. Naše kvízy jsou legendární a výherci si odnáší skvělé ceny!</p>
+                    <a href="tel:+420603404676" class="btn-small-link">Rezervovat stůl na kvíz →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2576.99999999!2d13.6366!3d50.5030!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTPCsDM4JzExLjgiTiAxM8KwMzgnMTEuOCJF!5e0!3m2!1scs!2scz!4v1600000000000!5m2!1scs!2scz" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" title="Mapa Hospoda U Hůlů Most"></iframe>
+    </section>
+</main>
+
+<footer id="kontakt">
+    <div class="footer-grid">
+        <div class="footer-col">
+            <h3>KDE NÁS NAJDETE</h3>
+            <address>
+                <strong>Hospoda U Hůlů</strong><br>
+                Čsl. armády 1546<br>
+                434 01 Most<br>
+                <span class="region">Ústecký kraj</span>
+            </address>
+        </div>
+        <div class="footer-col">
+            <h3>OTEVÍRACÍ DOBA</h3>
+            <ul class="opening-hours" style="list-style:none; padding:0;">
+                <li>Út - Pá: <time datetime="16:00">16:00</time> - <time datetime="22:00">22:00</time></li>
+                <li style="opacity: 0.7;">So - Po: Zavřeno</li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h3>KONTAKTUJTE NÁS</h3>
+            <p><a href="tel:+420603404676" class="contact-link"><i class="fa-solid fa-phone"></i> +420 603 404 676</a></p>
+            <p><a href="mailto:info@uhulu.cz" class="contact-link"><i class="fa-solid fa-envelope"></i> info@uhulu.cz</a></p>
+        </div>
+    </div>
+    
+    <div class="credit">
+        <p>© 2026 <strong>U Hůlů</strong> | Tradiční hospoda v Mostě | <a href="/sitemap.xml">Mapa stránek</a></p>
+        <p class="small-text">Created by <a href="https://martyc.eu" rel="nofollow">martyc.eu</a></p>
+    </div>
+
+    <div class="legal-info">
+        <p>Provozovatel: Ivona Vondráčková, 17. listopadu 2069, 440 01, Louny. IČO: 87043963.</p>
+    </div>
+</footer>
+
+<script>
+    // Mobilní Menu
+    const burger = document.getElementById('mobile-menu-btn');
+    const mobileNav = document.getElementById('mobile-nav');
+    
+    burger.addEventListener('click', () => {
+        mobileNav.classList.toggle('active');
+        burger.innerHTML = mobileNav.classList.contains('active') 
+            ? '<i class="fa-solid fa-xmark"></i>' 
+            : '<i class="fa-solid fa-bars"></i>';
+    });
+
+    // Slideshow
+    const slides = document.querySelectorAll('.hero-slide');
+    let currentSlide = 0;
+    const slideInterval = 5000;
+
+    function nextSlide() {
+        slides[currentSlide].classList.remove('active');
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].classList.add('active');
+    }
+    
+    if(slides.length > 0) {
+        setInterval(nextSlide, slideInterval);
+    }
+</script>
+
 </body>
 </html>

@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+
+# Odkaz na mapu stránek (změňte doménu, pokud by nebyla uhulu.cz)
+Sitemap: https://uhulu.cz/sitemap.xml
